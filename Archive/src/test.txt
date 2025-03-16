@@ -1,0 +1,1 @@
+DELETE FROM profil WHERE datemesure NOT IN (SELECT datemesure FROM (SELECT datemesure FROM profil ORDER BY datemesure DESC LIMIT 5) AS tmp);
