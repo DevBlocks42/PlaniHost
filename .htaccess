@@ -1,0 +1,14 @@
+RewriteEngine on 
+RewriteRule ^([a-zA-Z0-9]*)(/)*$ router.php?route=$1
+RewriteRule ^rooms/([0-9]*)(/*)$ router.php?route=rooms&page=$1
+RewriteRule ^adminReservations/([0-9]*)(/*)$ router.php?route=adminReservations&page=$1
+RewriteRule ^adminSettings/([0-9]*)(/*)$ router.php?route=adminSettings&page=$1
+RewriteRule ^adminClients/([0-9]*)(/*)$ router.php?route=adminClients&page=$1
+RewriteRule ^adminEditClient/([0-9]*)(/*)$ router.php?route=adminEditClient&clientid=$1
+RewriteRule ^editReservationForm/([0-9]*)(/*)$ router.php?route=editReservationForm&resid=$1
+RewriteRule ^reservation/([0-9]*)/([0-9]*)(/*)$ router.php?route=reservation&room=$1&period=$2
+RewriteRule ^getRoomInfos/([0-9]*)(/*)$ router.php?route=getRoomInfos&room=$1
+RewriteRule ^roomDetails/([0-9]*)(/*)$ router.php?route=roomDetails&room=$1
+RewriteRule ^calendarDetails/([0-9]*)/([0-9]*)(/*)$ router.php?route=calendarDetails&room=$1&period=$2
+RewriteRule ^removeRoomImage(/)*$ router.php?route=removeRoomImage
+RewriteRule ^removeRooms(/)*$ router.php?route=removeRoom
